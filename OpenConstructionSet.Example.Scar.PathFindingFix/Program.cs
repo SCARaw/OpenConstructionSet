@@ -2,7 +2,7 @@ using OpenConstructionSet.Data;
 
 const string ModName = "OCSP SCAR's pathfinding fix";
 const string ModFileName = ModName + ".mod";
-const string ReferenceModName = "SCAR's pathfinding fix.mod";
+const string ReferenceModName = "Immersive non-combat animations";
 
 Console.WriteLine("OpenConstructionSet Patcher");
 Console.WriteLine("SCAR's pathfinding fix https://www.nexusmods.com/kenshi/mods/602");
@@ -92,8 +92,8 @@ if (!OcsIOService.Default.TryReadDataFile(referenceMod.FullName, out var referen
 
 // Extract core values from the Greenlander race item
 var greenlander = referenceData.Items.Find(i => i.StringId == "17-gamedata.quack")!;
-var pathfindAcceleration = greenlander.Values["pathfind acceleration"];
-var waterAvoidance = greenlander.Values["water avoidance"];
+var pathfindAcceleration = greenlander.Values["INCA idle set 2"];
+var waterAvoidance = shek.Values["INCA idle set 1"];
 
 // Build mod
 var header = new Header(referenceData.Header?.Version ?? 1,
